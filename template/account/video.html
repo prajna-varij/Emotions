@@ -1,0 +1,25 @@
+{% extends 'homeapp/Mainhome.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        {% for x in da %}
+        
+        <video class ="video-fluid" width="640" height="350"  controls="controls" >
+            <source src="{{x.file.url}}" type="video/mp4" />
+        </video>
+        <br>
+
+        <h1>{{ x.name }}</h1>
+
+        <br>
+        
+        
+    {% endfor %}
+    </div>
+
+
+
+
+
+{% endblock %}
